@@ -11,7 +11,7 @@ class ImportExportServiceTest extends BaseTest
     protected $newUser;
     protected $import_file;
 
-    public function setUp()
+    public function setUp(): void
 	{
 		parent::setUp();
 		parent::createSuperClient();
@@ -19,7 +19,7 @@ class ImportExportServiceTest extends BaseTest
         $this->import_file = file_get_contents( dirname(__FILE__) . '/resources/jasperadmin_import.zip');    
 	}
 
-    public function tearDown()
+    public function tearDown(): void
 	{
 		parent::tearDown();
     }

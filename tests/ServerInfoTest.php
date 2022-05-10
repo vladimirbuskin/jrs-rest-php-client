@@ -7,12 +7,12 @@ class ServerInfoTest extends BaseTest {
     protected $jc;
     protected $newUser;
 
-    public function setUp() {
+    public function setUp():void {
 		parent::setUp();
 		
     }
 
-    public function tearDown() {
+    public function tearDown():void {
 		parent::tearDown();
 		
     }

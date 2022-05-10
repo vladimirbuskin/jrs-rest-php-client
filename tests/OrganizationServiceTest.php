@@ -10,7 +10,7 @@ class JasperOrganizationServiceTest extends BaseTest {
     protected $testOrg;
     protected $subOrg;
 
-    public function setUp() {
+    public function setUp():void {
 		parent::setUp();
 		
         $this->testOrg = new Organization(
@@ -32,7 +32,7 @@ class JasperOrganizationServiceTest extends BaseTest {
 		$this->os->createOrganization($this->subOrg);
     }
 
-    public function tearDown() {
+    public function tearDown():void {
 		parent::tearDown();
 		$this->os->deleteOrganization($this->subOrg);
 		$this->os->deleteOrganization($this->testOrg);

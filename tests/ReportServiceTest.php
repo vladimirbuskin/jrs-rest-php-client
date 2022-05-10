@@ -7,7 +7,7 @@ class ReportServiceTest extends BaseTest {
 	protected $jc;
 	protected $sample_report;
 
-	public function setUp() {
+	public function setUp():void {
 		parent::setUp();
 		$this->rs = $this->jc->reportService();
 		$this->ros = $this->jc->optionsService();
@@ -17,7 +17,7 @@ class ReportServiceTest extends BaseTest {
 		$this->sample_report_size = 220000;	// pre-determined
 	}
 
-	public function tearDown() {
+	public function tearDown():void {
 		parent::tearDown();
 		
 	}

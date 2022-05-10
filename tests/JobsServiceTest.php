@@ -15,7 +15,7 @@ class JobServiceTest extends BaseTest {
 	protected $testJob;
 
 	/** Coverage: createJob, createResource **/
-	public function setUp()
+	public function setUp(): void
 	{
 		parent::setUp();
 
@@ -31,7 +31,7 @@ class JobServiceTest extends BaseTest {
 	}
 	
 	/** Coverage: deleteJob, deleteResource **/
-	public function tearDown()
+	public function tearDown(): void
 	{
 		parent::tearDown();
 		$this->js->deleteJob($this->testJob->id);

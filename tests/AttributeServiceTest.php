@@ -10,7 +10,7 @@ class JasperAttributeServiceTest extends BaseTest {
 	protected $as;
 	protected $us;
 
-	public function setUp() {
+	public function setUp():void {
 		parent::setUp();
 		$this->newUser = u::createUser();
 		$this->attr = new Attribute('Gender', 'Robot');
@@ -21,7 +21,7 @@ class JasperAttributeServiceTest extends BaseTest {
 		
 	}
 
-	public function tearDown() {
+	public function tearDown():void {
 		parent::tearDown();
 		$this->us->deleteUser($this->newUser);
 	}

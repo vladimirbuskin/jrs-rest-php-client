@@ -10,7 +10,7 @@ class PermissionServiceTest extends BaseTest {
 	protected $jcSuper;
 	protected $newUser;
 
-	public function setUp()
+	public function setUp(): void
 	{
 		parent::setUp();
 				
@@ -32,7 +32,7 @@ class PermissionServiceTest extends BaseTest {
 		$this->testPermission = new RepositoryPermission($this->testFolder->uri, "user:/".$this->testUser->tenantId."/".$this->testUser->username, '32');		
 	}
 
-	public function tearDown()
+	public function tearDown(): void
 	{
 		parent::tearDown();
 		$this->jc->repositoryService()->deleteResources($this->testFolder->uri);

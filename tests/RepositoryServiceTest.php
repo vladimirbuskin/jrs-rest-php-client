@@ -18,7 +18,7 @@ class RepositoryServiceTest extends BaseTest {
 	protected $newResource_folder;
 	public $pwd;
 
-	public function setUp() {
+	public function setUp():void {
 		parent::setUp();
 
 		$this->pwd = dirname(__FILE__);
@@ -26,7 +26,7 @@ class RepositoryServiceTest extends BaseTest {
 		$this->rs = $this->jc->repositoryService();
 	}
 
-	public function tearDown() {
+	public function tearDown():void {
 		parent::tearDown();
 	}
 

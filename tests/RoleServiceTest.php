@@ -13,7 +13,7 @@ class RoleServiceTest extends BaseTest {
 	protected $newRole;
 
 	/** Coverage: createRole **/
-	public function setUp() {
+	public function setUp():void {
 		parent::setUp();
 		
 	//	$this->newUser = u::createUser();
@@ -24,7 +24,7 @@ class RoleServiceTest extends BaseTest {
 	}
 	
 	/** Coverage: deleteRole **/
-	public function tearDown() {
+	public function tearDown():void {
 		parent::tearDown();
 		$this->rs->deleteRole($this->newRole);	
 	}

@@ -11,7 +11,7 @@ class UserServiceTest extends BaseTest {
 	protected $newUser;
 	protected $us;
 
-	public function setUp()
+	public function setUp():void
 	{
 		parent::setUp();
 		$this->newUser = u::createUser();
@@ -19,7 +19,7 @@ class UserServiceTest extends BaseTest {
 		$this->us->addOrUpdateUser($this->newUser);
 	}
 
-	public function tearDown()
+	public function tearDown():void
 	{
 		parent::tearDown();
 		$this->us->deleteUser($this->newUser);

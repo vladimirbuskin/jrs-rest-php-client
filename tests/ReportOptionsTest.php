@@ -8,14 +8,14 @@ class ReportOptionsTest extends BaseTest {
 	protected $report_uri;
 	protected $testSuccess;
 
-	public function setUp() {
+	public function setUp():void {
 		parent::setUp();
 		$this->os = $this->jc->optionsService();
 		$this->report_uri = '/reports/samples/Cascading_multi_select_report';
 		$this->testSuccess = false;
 	}
 
-	public function tearDown() {
+	public function tearDown():void {
 		parent::tearDown();
 		$this->testSuccess = false;
 	}
