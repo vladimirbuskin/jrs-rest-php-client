@@ -66,7 +66,13 @@ class RESTRequest
         foreach (array_values($array) as $value) {
             $pair = explode(':', $value, 2);
             if (count($pair) > 1) {
-                $result[$pair[0]] = ltrim($pair[1]);
+                $key = $pair[0];
+                $value = ltrim($pair[1]);
+                $keyUp = implode("-", array_map(function($e) { return strlen($e)==0 ? $e : strtoupper($e[0]).substr($e, 1); }, explode("-", $key)));
+                $result[$key] = $value;
+                if ($key != $keyUp) {
+                  $result[$keyUp] = $value;
+                }
             } else {
                 $result[] = $value;
             }
