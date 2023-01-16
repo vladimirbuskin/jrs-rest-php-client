@@ -13,6 +13,7 @@ define("BASE_REST2_URL", "/rest_v2");
  *
  * @package Jaspersoft\Client
  */
+#[\AllowDynamicProperties]
 class Client
 {
     private $restReq;

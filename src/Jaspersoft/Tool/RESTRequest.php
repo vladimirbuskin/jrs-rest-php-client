@@ -3,6 +3,7 @@ namespace Jaspersoft\Tool;
 
 use Jaspersoft\Exception\RESTRequestException;
 
+#[\AllowDynamicProperties]
 class RESTRequest
 {
 
